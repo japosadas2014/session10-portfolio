@@ -5,14 +5,15 @@ var PortfolioListController = angular.module("PortfolioListController",[]);
 portfolioApp.config(["$routeProvider", function($routeProvider) {
 
 	$routeProvider
+	.when("/portfolio/:portfolio_name", {
+		templateUrl: "partials/portfolio_view.html",
+		controller: "PortfolioViewController"
+	})
 	.when("/", {
 		templateUrl: "partials/portfolios.html",
 		controller: "PortfolioListController"
 	})
-	//when("/login", {
-	//	templateUrl: "partials/login.html",
-	//	controller: "registration"
-	//}).
+
 	//when("/register", {
 	//	templateUrl: "partials/register.html",
 	//	controller: "registration"
